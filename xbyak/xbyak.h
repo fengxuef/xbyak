@@ -1575,6 +1575,7 @@ private:
 			labelMgr_.addUndefinedLabel(label, jmp);
 		}
 	}
+protected:
 	void opJmpAbs(const void *addr, LabelType type, uint8 shortCode, uint8 longCode, uint8 longPref = 0)
 	{
 		if (isAutoGrow()) {
@@ -1589,6 +1590,7 @@ private:
 		}
 
 	}
+private:
 	// reg is reg field of ModRM
 	// immSize is the size for immediate value
 	// disp8N = 0(normal), disp8N = 1(force disp32), disp8N = {2, 4, 8} ; compressed displacement
